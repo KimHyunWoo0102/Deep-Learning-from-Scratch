@@ -35,8 +35,5 @@ if __name__ == "__main__":
     t = np.array([0, 0, 1])
     print(net.loss(x, t))
 
-    def f(W):
-        return net.loss(x, t)
-
     dW = numerical_gradient(lambda w: net.loss(x, t), net.W)
     print(dW)
